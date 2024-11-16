@@ -17,11 +17,11 @@ namespace TextFile
 		{
 			InitializeComponent();
 		}
-		
-		
+
+
 		private void btnRegister_Click(object sender, EventArgs e)
 		{
-			
+
 
 
 			long studentno = long.Parse(txtstudentNo.Text);
@@ -29,7 +29,7 @@ namespace TextFile
 			string fullname = txtLastName.Text + "," + txtFirstName.Text + "," + txtMI.Text;
 
 			int Age = int.Parse(txtAge.Text);
-			string age = Age.ToString(); 
+			string age = Age.ToString();
 
 			string program = cbProgram.Text;
 			string gender = cbGender.Text;
@@ -39,7 +39,7 @@ namespace TextFile
 			string cont = contact.ToString();
 
 
-			string [] register =
+			string[] register =
 			{
 				"Student No. " + studno,
 				"FullName. " + fullname,
@@ -52,7 +52,7 @@ namespace TextFile
 			string docPath =
 			Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 			using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath,
-			studno +".txt")))
+			studno + ".txt")))
 			{
 				foreach (string final in register)
 				{
@@ -62,6 +62,12 @@ namespace TextFile
 			}
 			MessageBox.Show("Successfully!");
 
+		}
+
+		private void btnrecord_Click(object sender, EventArgs e)
+		{
+			frmStudentRecord frmStudentRecord = new frmStudentRecord();
+			frmStudentRecord.ShowDialog();
 		}
 	}
 }

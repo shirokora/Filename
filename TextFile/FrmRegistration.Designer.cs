@@ -47,6 +47,7 @@
 			cbGender = new ComboBox();
 			txtContactNo = new TextBox();
 			btnRegister = new Button();
+			btnrecord = new Button();
 			SuspendLayout();
 			// 
 			// txtstudentNo
@@ -199,7 +200,7 @@
 			// 
 			// btnRegister
 			// 
-			btnRegister.Location = new Point(333, 357);
+			btnRegister.Location = new Point(333, 302);
 			btnRegister.Name = "btnRegister";
 			btnRegister.Size = new Size(184, 60);
 			btnRegister.TabIndex = 12;
@@ -207,11 +208,22 @@
 			btnRegister.UseVisualStyleBackColor = true;
 			btnRegister.Click += btnRegister_Click;
 			// 
+			// btnrecord
+			// 
+			btnrecord.Location = new Point(666, 317);
+			btnrecord.Name = "btnrecord";
+			btnrecord.Size = new Size(150, 45);
+			btnrecord.TabIndex = 13;
+			btnrecord.Text = "Records";
+			btnrecord.UseVisualStyleBackColor = true;
+			btnrecord.Click += btnrecord_Click;
+			// 
 			// FrmRegistration
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(866, 450);
+			ClientSize = new Size(866, 381);
+			Controls.Add(btnrecord);
 			Controls.Add(btnRegister);
 			Controls.Add(cbGender);
 			Controls.Add(cbProgram);
@@ -258,5 +270,6 @@
 		private ComboBox cbGender;
 		private TextBox txtContactNo;
 		private Button btnRegister;
+		private Button btnrecord;
 	}
 }
